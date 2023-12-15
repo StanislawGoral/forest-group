@@ -8,153 +8,166 @@
     <title>Forest</title>
     <script src="https://kit.fontawesome.com/56c78b6c2e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/main.min.css">
 </head>
 
 <body>
 
     <header class='header'>
-    <div class='header-logo'>
-        <i class="fa-solid fa-tree"></i><span class='header-title'>Forest</span>
-    </div>
-    <nav class="header-nav">
-        <ul class="header-nav-list">
-            <li class="header-nav-item"><a href="#home">Home</a></li>
-            <li class="header-nav-item"><a href="#about">O nas</a></li>
-            <li class="header-nav-item"><a href="#offer">Oferta</a></li>
-            <li class="header-nav-item"><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-    <nav class="header-nav-mobile">
-        <div class="header-nav-mobile-burger">
-            <div class="burger-bar bar-1"></div>
-            <div class="burger-bar bar-2"></div>
-            <div class="burger-bar bar-3"></div>
+    <div class="wrapper">
+        <div class='header__logo'>
+            <i class="fa-solid fa-tree"></i><span class='header__title'>Forest</span>
         </div>
-        <ul class="header-nav-mobile-list">
-            <li class="header-nav-item"><a href="#home">Home</a></li>
-            <li class="header-nav-item"><a href="#about">O nas</a></li>
-            <li class="header-nav-item"><a href="#offer">Oferta</a></li>
-            <li class="header-nav-item"><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#home">Home</a></li>
+                <li class="header__nav-item"><a href="#about">O nas</a></li>
+                <li class="header__nav-item"><a href="#offer">Oferta</a></li>
+                <li class="header__nav-item"><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <nav class="header__nav-mobile">
+            <div class="header__mobile-burger">
+                <div class="burger-bar bar-1"></div>
+                <div class="burger-bar bar-2"></div>
+                <div class="burger-bar bar-3"></div>
+            </div>
+            <ul class="header__mobile-list">
+                <li class="header__nav-item"><a href="#home">Home</a></li>
+                <li class="header__nav-item"><a href="#about">O nas</a></li>
+                <li class="header__nav-item"><a href="#offer">Oferta</a></li>
+                <li class="header__nav-item"><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
     <section class='banner'>
-        <h1>Forest Group</h1>
-        <p>Najpiękniejszy park w Twojej okolicy!</p>
-        <div class='banner-shadow'></div>
+        <div class="wrapper">
+            <h1 class="banner__heading">Forest Group</h1>
+            <p class="banner__text">Najpiękniejszy park w Twojej okolicy!</p>
+        </div>
+        <div class='banner__shadow'></div>
+        <div class="banner__image"></div>
+
     </section>
 
     <section class="about" id="about">
-        <h2 class="section-header">O nas</h2>
-        <img class="about-image" src="" alt="">
-        <div class="about-text">
-            <h3 class="paragraph-header">Niezapomniane przygody</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, impedit expedita. Sint illo quos
-                dolore ab nobis? Ut, iusto. Id praesentium nulla eaque laboriosam quod libero ut repellat animi minima
-                dolore labore expedita amet aliquam, nisi corrupti fugit possimus perferendis! www.MMCSchool.pl</p>
+        <div class="wrapper">
+            <h2 class="section__header">O nas</h2>
+            <img class="about__image" src="" alt="">
+            <div class="about__text">
+                <h3 class="about__heading">Niezapomniane przygody</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, impedit expedita. Sint illo
+                    quos
+                    dolore ab nobis? Ut, iusto. Id praesentium nulla eaque laboriosam quod libero ut repellat animi
+                    minima
+                    dolore labore expedita amet aliquam, nisi corrupti fugit possimus perferendis! www.MMCSchool.pl</p>
+            </div>
         </div>
     </section>
 
-    <section class="hero-img">
-        <div class="hero-content">
-            <p>Przygoda dla całej rodziny</p>
+    <section class="hero">
+        <div class="wrapper">
+            <div class="hero__content">
+                <p>Przygoda dla całej rodziny</p>
+            </div>
         </div>
-        <div class="hero-bg"></div>
+        <div class="hero__bg"></div>
     </section>
 
     <section class="offer" id="offer">
-        <h2 class="section-header">Oferta</h2>
-        <p>Wybierz jedną z naszych wspaniałych ofert!</p>
-        <div class="offer-cards">
+        <div class="wrapper">
+            <h2 class="offer-heading">Oferta</h2>
+            <p>Wybierz jedną z naszych wspaniałych ofert!</p>
+            <div class="offer-cards">
 
-            <div class="offer-card">
-                <h3 class="offer-card-title">Demo</h3>
-                <span class="offer-card-prize">$0</span>
-                <ul class="offer-card-list">
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja poza pakietem</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja poza pakietem</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja poza pakietem</p>
-                    </li>
-                </ul>
-                <button class="offer-card-button">Wybierz</button>
+                <div class="offer-card">
+                    <h3 class="offer-card__title">Demo</h3>
+                    <span class="offer-card__prize">$0</span>
+                    <ul class="offer-card__list">
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja poza pakietem</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja poza pakietem</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja poza pakietem</p>
+                        </li>
+                    </ul>
+                    <button class="offer-card__button">Wybierz</button>
+                </div>
+
+                <div class="offer-card">
+                    <h3 class="offer-card__title">Demo</h3>
+                    <span class="offer-card__prize">$99</span>
+                    <ul class="offer-card__list">
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja poza pakietem</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja poza pakietem</p>
+                        </li>
+                    </ul>
+                    <button class="offer-card-button">Wybierz</button>
+                </div>
+
+                <div class="offer-card">
+                    <h3 class="offer-card__title">Demo</h3>
+                    <span class="offer-card__prize">$299</span>
+                    <ul class="offer-card__list">
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                        <li class="offer-card__item">
+                            <i class="fas"></i>
+                            <p>opcja w pakiecie</p>
+                        </li>
+                    </ul>
+                    <button class="offer-card-button">Wybierz</button>
+                </div>
             </div>
-
-            <div class="offer-card">
-                <h3 class="offer-card-title">Demo</h3>
-                <span class="offer-card-prize">$99</span>
-                <ul class="offer-card-list">
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja poza pakietem</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja poza pakietem</p>
-                    </li>
-                </ul>
-                <button class="offer-card-button">Wybierz</button>
-            </div>
-
-            <div class="offer-card">
-                <h3 class="offer-card-title">Demo</h3>
-                <span class="offer-card-prize">$299</span>
-                <ul class="offer-card-list">
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                    <li class="offer-card-item">
-                        <i class="fas"></i>
-                        <p>opcja w pakiecie</p>
-                    </li>
-                </ul>
-                <button class="offer-card-button">Wybierz</button>
-            </div>
-
         </div>
     </section>
 
