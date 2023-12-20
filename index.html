@@ -22,7 +22,7 @@
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#home">Home</a></li>
+                <li class="header__nav-item header__nav-item--active"><a href="#home">Home</a></li>
                 <li class="header__nav-item"><a href="#about">O nas</a></li>
                 <li class="header__nav-item"><a href="#offer">Oferta</a></li>
                 <li class="header__nav-item"><a href="#contact">Kontakt</a></li>
@@ -44,167 +44,173 @@
     </div>
 </header>
 
-    <section class='banner'>
-        <div class="wrapper">
-            <h1 class="banner__heading">Forest Group</h1>
-            <p class="banner__text">Najpiękniejszy park w Twojej okolicy!</p>
-        </div>
-        <div class='banner__shadow'></div>
-        <div class="banner__image"></div>
-    </section>
+    <main>
+        <section class='banner anchor' id="home">
+            <div class="wrapper">
+                <h1 class="banner__heading">Forest Group</h1>
+                <p class="banner__text">Najpiękniejszy park w Twojej okolicy!</p>
+            </div>
+            <div class='banner__shadow'></div>
+            <div class="banner__image"></div>
+        </section>
 
-    <section class="aboutus" id="about">
-        <div class="wrapper">
-            <h2 class="section-heading">O nas</h2>
-            <img class="aboutus__image" src="./dist/img/waters-3095682_1280.jpg" alt="mała wysepka z drzewem pośrodku jeziora w lesie">
-            <div class="aboutus__text">
-                <h3 class="aboutus__heading">Niezapomniane przygody</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, impedit expedita. Sint illo
-                    quos
-                    dolore ab nobis? Ut, iusto. Id praesentium nulla eaque laboriosam quod libero ut repellat animi
-                    minima
-                    dolore labore expedita amet aliquam, nisi corrupti fugit possimus perferendis!</p>
+        <section class="aboutus anchor" id="about">
+            <div class="wrapper">
+                <h2 class="section-heading">O nas</h2>
+                <img class="aboutus__image" src="./dist/img/waters-3095682_1280.jpg"
+                    alt="mała wysepka z drzewem pośrodku jeziora w lesie">
+                <div class="aboutus__text">
+                    <h3 class="aboutus__heading">Niezapomniane przygody</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, impedit expedita. Sint
+                        illo
+                        quos
+                        dolore ab nobis? Ut, iusto. Id praesentium nulla eaque laboriosam quod libero ut repellat animi
+                        minima
+                        dolore labore expedita amet aliquam, nisi corrupti fugit possimus perferendis!</p>
                     <a href="www.MMCSchool.pl">www.MMCSchool.pl</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="hero">
-        <div class="wrapper">
-            <div class="hero__content">
-                <p>Przygoda dla całej rodziny</p>
-            </div>
-        </div>
-        <div class="hero__shadow"></div>
-        <div class="hero__bg"></div>
-    </section>
-
-    <section class="offer" id="offer">
-        <div class="wrapper">
-            <h2 class="section-heading">Oferta</h2>
-            <p>Wybierz jedną z naszych wspaniałych ofert!</p>
-            <div class="offer__cards">
-
-                <div class="offer__card">
-                    <h3 class="offer__card-title">Demo</h3>
-                    <p class="offer__card-prize">$0</p>
-                    <ul class="offer__card-list">
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-minus"></i>
-                            <p>opcja poza pakietem</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-minus"></i>
-                            <p>opcja poza pakietem</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-minus"></i>
-                            <p>opcja poza pakietem</p>
-                        </li>
-                    </ul>
-                    <button class="offer__card-button">Wybierz</button>
-                </div>
-
-                <div class="offer__card">
-                    <h3 class="offer__card-title">Demo</h3>
-                    <p class="offer__card-prize">$99</p>
-                    <ul class="offer__card-list">
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-minus"></i>
-                            <p>opcja poza pakietem</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-minus"></i>
-                            <p>opcja poza pakietem</p>
-                        </li>
-                    </ul>
-                    <button class="offer__card-button offer__card-button--best">Wybierz</button>
-                </div>
-
-                <div class="offer__card">
-                    <h3 class="offer__card-title">Demo</h3>
-                    <p class="offer__card-prize">$299</p>
-                    <ul class="offer__card-list">
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                        <li class="offer__card-item">
-                            <i class="fas fa-check"></i>
-                            <p>opcja w pakiecie</p>
-                        </li>
-                    </ul>
-                    <button class="offer__card-button">Wybierz</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="hero">
+            <div class="wrapper">
+                <div class="hero__content">
+                    <p>Przygoda dla całej rodziny</p>
+                </div>
+            </div>
+            <div class="hero__shadow"></div>
+            <div class="hero__bg"></div>
+        </section>
+
+        <section class="offer anchor" id="offer">
+            <div class="wrapper">
+                <h2 class="section-heading">Oferta</h2>
+                <p>Wybierz jedną z naszych wspaniałych ofert!</p>
+                <div class="offer__cards">
+
+                    <div class="offer__card">
+                        <h3 class="offer__card-title">Demo</h3>
+                        <p class="offer__card-prize">$0</p>
+                        <ul class="offer__card-list">
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-minus"></i>
+                                <p>opcja poza pakietem</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-minus"></i>
+                                <p>opcja poza pakietem</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-minus"></i>
+                                <p>opcja poza pakietem</p>
+                            </li>
+                        </ul>
+                        <button class="offer__card-button">Wybierz</button>
+                    </div>
+
+                    <div class="offer__card">
+                        <h3 class="offer__card-title">Standard</h3>
+                        <p class="offer__card-prize">$99</p>
+                        <ul class="offer__card-list">
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-minus"></i>
+                                <p>opcja poza pakietem</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-minus"></i>
+                                <p>opcja poza pakietem</p>
+                            </li>
+                        </ul>
+                        <button class="offer__card-button offer__card-button--best">Wybierz</button>
+                    </div>
+
+                    <div class="offer__card">
+                        <h3 class="offer__card-title">Premium</h3>
+                        <p class="offer__card-prize">$299</p>
+                        <ul class="offer__card-list">
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                            <li class="offer__card-item">
+                                <i class="fas fa-check"></i>
+                                <p>opcja w pakiecie</p>
+                            </li>
+                        </ul>
+                        <button class="offer__card-button">Wybierz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class='footer'>
-    <section class='footer-section'>
-        <div class='footer-logo'>
-            <i class="fa-solid fa-tree"></i><span class='footer-title'>Forest</span>
+    <div class='wrapper'>
+        <div class='footer__logo'>
+            <i class="fa-solid fa-tree"></i><span class='footer__title'>Forest</span>
         </div>
-        <div class="footer-column">
-            <h3 class="footer-header">O nas</h3>
-            <ul class="footer-nav">
+        <div class="footer__column">
+            <h3 class="footer__heading">O nas</h3>
+            <ul class="footer__nav">
                 <li><a href="#">Historia</a></li>
                 <li><a href="#">Parki</a></li>
                 <li><a href="#">Opinie</a></li>
             </ul>
         </div>
-        <div class="footer-column">
-            <h3 class="footer-header">Nasza firma</h3>
-            <ul class="footer-nav">
+        <div class="footer__column">
+            <h3 class="footer__heading">Nasza firma</h3>
+            <ul class="footer__nav">
                 <li><a href="#">Praca</a></li>
                 <li><a href="#">Kadry</a></li>
                 <li><a href="#">Zarząd</a></li>
             </ul>
         </div>
-        <div class="footer-column">
-            <h3 class="footer-header">Dokumenty</h3>
-            <ul class="footer-nav">
+        <div class="footer__column">
+            <h3 class="footer__heading">Dokumenty</h3>
+            <ul class="footer__nav">
                 <li><a href="#">Wnioski</a></li>
                 <li><a href="#">Rezerwacje</a></li>
             </ul>
         </div>
-    </section>
-    <div class="footer-copyright">
-        <p class="footer-copyright-text"></p>
+    </div>
+    <div class="footer__copyright">
+        <p class="footer__copyright-text">&copy<span class="footer__copyright-year"></span> Forest Group Company Ltd.</p>
     </div>
 </footer>
+
+    <script src='/dist/js/currentYear.min.js'></script>
+    <script src='/dist/js/scrollspy.min.js'></script>
 
 </body>
 
