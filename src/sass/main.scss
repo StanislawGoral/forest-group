@@ -29,7 +29,6 @@ html {
 }
 
 body {
-	
 	font-family: "Raleway", sans-serif;
 }
 
@@ -74,7 +73,6 @@ main {
 	padding: 10px 20px;
 	z-index: 99999;
 	background: #ffffff;
-	
 
 	.wrapper {
 		@include flex-center;
@@ -110,6 +108,7 @@ main {
 	&__mobile-burger {
 		padding: 10px;
 		cursor: pointer;
+		z-index: 9999999;
 	}
 
 	&__nav-list {
@@ -118,22 +117,33 @@ main {
 	}
 
 	&__mobile-list {
-		display: none;
-	}
+		position: absolute;
+		top: -100vh;
+		left: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		background-color: #ffffff;
+		transition: top .3s ease-in-out;
 
-	&__mobile-burger:hover .bar-1,
-	&__mobile-burger:hover .bar-3 {
-		transform: scaleX(0);
-		opacity: 0;
-	}
+		&--active {
+			top: 0;
+		}
 
-	&__mobile-burger:hover .bar-2 {
-		transform: rotate(45deg);
-	}
-
-	&__mobile-burger:hover .bar-2::after {
-		transform: scaleY(1) rotate(90deg);
-		opacity: 1;
+		a {
+			font-size: 1.6rem;
+			display: block;
+			padding: 20px 40px;
+			color: #000000;
+			
+			&:hover {
+				color: #ffffff;
+			}
+		}
 	}
 
 	.burger-bar {
@@ -164,6 +174,21 @@ main {
 		@include bar-transitions;
 		transform: scaleY(0) rotate(45deg);
 		opacity: 0;
+	}
+
+	&__mobile-burger--active .bar-1,
+	&__mobile-burger--active .bar-3 {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+
+	&__mobile-burger--active .bar-2 {
+		transform: rotate(45deg);
+	}
+
+	&__mobile-burger--active .bar-2::after {
+		transform: scaleY(1) rotate(90deg);
+		opacity: 1;
 	}
 }
 
@@ -447,13 +472,13 @@ main {
 
 		&__nav-item {
 			margin: 0;
-			transition: background-color .3s ease-in-out;
+			transition: background-color 0.3s ease-in-out;
 
 			a {
 				display: inline-block;
 				padding: 20px 40px;
 				color: #000000;
-				transition: color .3s ease-in-out;
+				transition: color 0.3s ease-in-out;
 			}
 
 			&--active {
@@ -481,7 +506,7 @@ main {
 			display: none;
 		}
 	}
-	
+
 	.banner {
 		height: 460px;
 
@@ -495,7 +520,6 @@ main {
 	}
 
 	.aboutus {
-		
 		.wrapper {
 			display: flex;
 			flex-wrap: wrap;
@@ -552,7 +576,6 @@ main {
 	}
 
 	.footer {
-
 		&__column {
 			width: 33.3%;
 		}
@@ -560,7 +583,6 @@ main {
 		&__heading {
 			font-size: 2.4rem;
 		}
-
 	}
 }
 
@@ -568,7 +590,7 @@ main {
 	p,
 	a {
 		font-size: 2rem;
-		line-height:200%;
+		line-height: 200%;
 	}
 
 	.section-heading {
@@ -603,7 +625,7 @@ main {
 			display: none;
 		}
 	}
-	
+
 	.banner {
 		height: 460px;
 		text-align-last: left;
@@ -620,7 +642,6 @@ main {
 	}
 
 	.aboutus {
-		
 		.wrapper {
 			display: flex;
 			flex-wrap: wrap;
@@ -646,7 +667,6 @@ main {
 
 		&__heading {
 			font-size: 3.2rem;
-			
 		}
 	}
 
@@ -656,16 +676,14 @@ main {
 		&__content {
 			margin: 0 auto;
 			max-width: 1088px;
-			
+
 			p {
 				font-size: 5.2rem;
 			}
-
 		}
 	}
 
 	.offer {
-
 		&__cards {
 			flex-wrap: nowrap;
 		}
@@ -676,7 +694,6 @@ main {
 			&:nth-child(2) {
 				order: 0;
 			}
-
 		}
 
 		&__card-title {
@@ -694,7 +711,6 @@ main {
 	}
 
 	.footer {
-
 		.wrapper {
 			flex-wrap: nowrap;
 		}
@@ -718,6 +734,5 @@ main {
 			font-size: 2.7rem;
 			margin-bottom: 20px;
 		}
-
 	}
 }
