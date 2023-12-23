@@ -18,7 +18,45 @@
     <!-- @include 'header.kit' -->
 
     <main>
-    
+        
+        <section class="contact anchor" id="contact-anchor">
+            <h2 class="section-heading section-heading--contact">Kontakt</h2>
+            <div class="wrapper">
+
+                <div class="contact__form">
+                    <h3 class=>Masz pytanie?</h3>
+                    <p>Napisz do Nas, a my dołożymy wszelkich starań aby Ci pomóc!</p>
+                    <label for="first-name">Imię<span class="contact__form-required">*</span></label>
+                    <input id="first-name" type="text">
+                    <p class="contact__form-error">Pole nie może być puste!</p>
+
+                    <label for="email">E-mail<span class="contact__form-required">*</span></label>
+                    <input id="email" type="text">
+                    <p class="contact__form-error">Niepoprawny adres email!</p>
+
+                    <label for="message">Wiadomość<span class="contact__form-required">*</span></label>
+                    <textarea id="message" type="text"></textarea>
+                    <p class="contact__form-error">Pole nie może być puste!</p>
+
+                    <div class="contact__form-chekbox">
+
+                        <input id="policy" type="checkbox">
+                        <label for="policy">Akceptuję <a href="#">politykę prywatności</a><span
+                                class="contact__form-required">*</span></label>
+                    </div>
+                    <p class="contact__form-error">Musisz zaakecptować politykę prywatności!</p>
+                </div>
+
+                <div class="contact__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898050088974!2d19.890269276828437!3d50.08819561338028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1703311166747!5m2!1spl!2spl"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </section>
+
     </main>
     <!-- @include 'footer.kit' -->
 

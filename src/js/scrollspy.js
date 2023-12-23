@@ -1,35 +1,48 @@
-const nav = document.querySelector(".header__nav-list")
-const navLinks = nav.querySelectorAll(".header__nav-item")
-
+const header = document.querySelector('.header')
+const navList = document.querySelector(".header__nav-list")
+const navLinks = navList.querySelectorAll(".header__nav-item")
 const anchors = document.querySelectorAll(".anchor")
 
+let headerHeight
 let userOffsetTop
-let highestNavIndex = 0
-const scrollspy = () => {
+let navIDs = []
+
+const getLinks = () => {
+	navLinks.forEach(navLink => {
+		let navID = navLink.firstChild.getAttribute("href").replace("-link", "")
+		navID = navID
+			.replace("/index.html#", "")
+			.replace("/", "")
+			.replace(".html", "")
+		navIDs.push(navID)
+	})
+}
+
+const scrollWatch = () => {
 	userOffsetTop = document.documentElement.scrollTop
-	for (let i = 0; i < anchors.length; i++) {
-		if(anchors[i].offsetTop <= userOffsetTop+70){
-            highestNavIndex = i;
-        }
-    }
+    headerHeight = header.clientHeight+1
+	anchors.forEach(anchor => {
+		if (anchor.offsetTop < userOffsetTop+headerHeight) {
+			for (let i = 0; i < navLinks.length; i++) {
+				if (
+					navLinks[i]
+						.getAttribute("id")
+						.includes(anchor.getAttribute("id").replace("-anchor", ""))
+				) {
+					navLinks[i].classList.add("header__nav-item--active")
+				}
+
+                else {
+                    navLinks[i].classList.remove("header__nav-item--active")
+                }
+			}
+		}
+
+        
+	})
 }
 
-const cleanup = () => {
-    for (let i = 0; i < anchors.length; i++) {
-        if (i == highestNavIndex) {
-            navLinks[i].classList.add("header__nav-item--active")
-        }
+getLinks()
+scrollWatch()
 
-        else {
-            navLinks[i].classList.remove("header__nav-item--active")
-        }
-    }
-}
-
-document.addEventListener("scroll", () => {
-    scrollspy()
-    cleanup()
-})
-
-scrollspy()
-cleanup()
+document.addEventListener("scroll", scrollWatch)
