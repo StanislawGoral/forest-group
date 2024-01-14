@@ -22,7 +22,7 @@ const scrollWatch = () => {
 	userOffsetTop = document.documentElement.scrollTop
     headerHeight = header.clientHeight+1
 	anchors.forEach(anchor => {
-		if (anchor.offsetTop < userOffsetTop+headerHeight) {
+		if (anchor.offsetTop <= userOffsetTop+headerHeight) {
 			for (let i = 0; i < navLinks.length; i++) {
 				if (
 					navLinks[i]
