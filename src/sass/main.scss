@@ -65,6 +65,14 @@ main {
 	margin-top: 69px;
 }
 
+.image-mobile {
+	display: block;
+}
+
+.image-desktop {
+	display: none;
+}
+
 /* === HEADER === */
 
 .header {
@@ -204,10 +212,10 @@ main {
 
 	.burger-bar {
 		position: relative;
+		margin: 5px 0px;
 		width: 25px;
 		height: 3px;
 		background-color: #000000;
-		margin: 5px 0px;
 	}
 
 	.bar-1,
@@ -248,7 +256,7 @@ main {
 	}
 }
 
-/* === BANNER === */
+/* === HEADER === */
 
 .banner {
 	@include flex-center;
@@ -504,69 +512,6 @@ main {
 	}
 }
 
-/* === FOOTER === */
-
-.footer {
-	background-color: #f5f5f5;
-
-	.wrapper {
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		padding: 20px 30px;
-	}
-
-	&__logo {
-		display: flex;
-		justify-content: flex-start;
-		width: 100%;
-		margin-top: 20px;
-		margin-bottom: 20px;
-
-		i {
-			padding: 0 5px;
-			font-size: 2.8rem;
-			color: #414141;
-		}
-
-		span {
-			font-size: 2.6rem;
-		}
-	}
-
-	&__column {
-		width: 50%;
-		margin: 20px 0;
-		padding: 0 10px;
-	}
-
-	&__heading {
-		font-size: 1.9rem;
-	}
-
-	&__nav {
-		list-style: none;
-
-		li {
-			margin: 5px 0;
-
-			a {
-				color: #646464;
-			}
-		}
-	}
-
-	&__copyright {
-		border-top: 1px solid #707070;
-		text-align: center;
-	}
-
-	&__copyright-text {
-		padding: 20px 0;
-	}
-}
-
 /* === CONTACT === */
 
 .contact {
@@ -727,11 +672,9 @@ main {
 	}
 }
 
-/* === OFERTA - PODSTRONA === */
+/* === OFFER - PAGE === */
 
 .offerpage {
-	margin-bottom: 60px;
-
 	&__offers {
 		display: flex;
 		flex-wrap: wrap;
@@ -739,24 +682,27 @@ main {
 
 	&__offer {
 		position: relative;
-		margin: 20px 0;
+		margin: 10px 0;
+		padding-bottom: 30px;
 		background-size: cover;
 		background-position: center;
-		padding: 30px;
 		overflow: hidden;
-		color: white;
+		filter: backdrop-blur(20px);
+		border-bottom: solid 1px #eeeeee;
 
-		&--free {
-			background-image: url("/dist/img/offer-free-small.jpg");
+		&:first-child {
+			margin-top: 0;
 		}
 
-		&--standard {
-			background-image: url("/dist/img/offer-standard-small.jpg");
+		&:last-child {
+			border-bottom: none;
 		}
+	}
 
-		&--premium {
-			background-image: url("/dist/img/offer-premium-small.jpg");
-		}
+	&__offer-image {
+		width: 100%;
+		object-fit: cover;
+		margin: 20px 0;
 	}
 
 	&__offer-title {
@@ -767,33 +713,88 @@ main {
 
 	&__offer-prize {
 		position: relative;
+		margin-top: 16px;
 		font-size: 4rem;
 		z-index: 20;
+		padding-left: 10px;
+		border-left: solid 10px #2ade72;
 	}
 
 	&__offer-description {
 		margin-top: 20px;
-		padding: 20px;
 		position: relative;
 		z-index: 20;
-		border: solid 2px #ffffff;
-	}
-
-	&__offer-shadow {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: linear-gradient(#000000ff, #00000077);
-		z-index: 10;
 	}
 }
 
-/* === MEDIA === */
+/* === FOOTER === */
+
+.footer {
+	background-color: #f5f5f5;
+
+	.wrapper {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 20px 30px;
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		i {
+			padding: 0 5px;
+			font-size: 2.8rem;
+			color: #414141;
+		}
+
+		span {
+			font-size: 2.6rem;
+		}
+	}
+
+	&__column {
+		width: 50%;
+		margin: 20px 0;
+		padding: 0 10px;
+	}
+
+	&__heading {
+		font-size: 1.9rem;
+	}
+
+	&__nav {
+		list-style: none;
+
+		li {
+			margin: 5px 0;
+
+			a {
+				color: #646464;
+			}
+		}
+	}
+
+	&__copyright {
+		border-top: 1px solid #707070;
+		text-align: center;
+	}
+
+	&__copyright-text {
+		padding: 20px 0;
+	}
+}
+
+/* +++++++++++++ TABLET +++++++++++++ */
 
 @media screen and (min-width: 768px) {
+	/* === GENERAL === */
+
 	html {
 		scroll-padding-top: 64px;
 	}
@@ -807,9 +808,19 @@ main {
 		margin-top: 64px;
 	}
 
+	.image-mobile {
+		display: none;
+	}
+
+	.image-desktop {
+		display: block;
+	}
+
 	.section-heading {
 		font-size: 3.4rem;
 	}
+
+	/* === HEADER === */
 
 	.header {
 		width: 100%;
@@ -892,6 +903,8 @@ main {
 		}
 	}
 
+	/* === BANNER === */
+
 	.banner {
 		height: 460px;
 
@@ -903,6 +916,8 @@ main {
 			font-size: 3rem;
 		}
 	}
+
+	/* === ABOUT US ===*/
 
 	.aboutus {
 		.wrapper {
@@ -940,6 +955,8 @@ main {
 		}
 	}
 
+	/* === HERO === */
+
 	.hero {
 		height: 360px;
 
@@ -948,6 +965,8 @@ main {
 			max-width: 400px;
 		}
 	}
+
+	/* === OFFER === */
 
 	.offer {
 		&__card {
@@ -968,15 +987,7 @@ main {
 		}
 	}
 
-	.footer {
-		&__column {
-			width: 33.3%;
-		}
-
-		&__heading {
-			font-size: 2.4rem;
-		}
-	}
+	/* === CONTACT === */
 
 	.contact {
 		.wrapper {
@@ -1020,9 +1031,38 @@ main {
 			padding-left: 40px;
 		}
 	}
+
+	/* === OFFER - PAGE === */
+
+	.offerpage {
+		&__offers {
+			flex-wrap: wrap;
+		}
+
+		&__offer {
+			width: 45%;
+			margin: 0 2.5%;
+		}
+	}
+
+	/* === FOOTER === */
+
+	.footer {
+		&__column {
+			width: 33.3%;
+		}
+
+		&__heading {
+			font-size: 2.4rem;
+		}
+	}
 }
 
+/* +++++++++++++ DESKTOP +++++++++++++ */
+
 @media screen and (min-width: 992px) {
+	/* === GENERAL === */
+
 	html {
 		scroll-padding-top: 80px;
 	}
@@ -1040,6 +1080,8 @@ main {
 	.section-heading {
 		font-size: 4.6rem;
 	}
+
+	/* === HEADER === */
 
 	.header {
 		width: 100%;
@@ -1088,6 +1130,8 @@ main {
 		}
 	}
 
+	/* === HEADER === */
+
 	.banner {
 		height: 460px;
 		text-align-last: left;
@@ -1107,6 +1151,8 @@ main {
 			background-image: url("/dist/img/banner-large.jpg");
 		}
 	}
+
+	/* === ABOUT US ===*/
 
 	.aboutus {
 		.wrapper {
@@ -1137,6 +1183,8 @@ main {
 		}
 	}
 
+	/* === HERO === */
+
 	.hero {
 		height: 360px;
 
@@ -1153,6 +1201,8 @@ main {
 			background-image: url("/dist/img/hero-large.jpg");
 		}
 	}
+
+	/* === OFFER === */
 
 	.offer {
 		&__cards {
@@ -1181,31 +1231,7 @@ main {
 		}
 	}
 
-	.footer {
-		.wrapper {
-			flex-wrap: nowrap;
-		}
-
-		&__logo {
-			i {
-				font-size: 6rem;
-				margin-right: 12px;
-			}
-
-			span {
-				font-size: 6rem;
-			}
-		}
-
-		&__column {
-			width: 33.3%;
-		}
-
-		&__heading {
-			font-size: 2.7rem;
-			margin-bottom: 20px;
-		}
-	}
+	/* === CONTACT === */
 
 	.contact {
 		&__form {
@@ -1238,6 +1264,43 @@ main {
 		&__map {
 			width: 65%;
 			height: auto;
+		}
+	}
+
+	/* === OFFER - PAGE === */
+
+	.offerpage {
+		&__offer {
+			width: 26%;
+			margin: 0 3.6%;
+		}
+	}
+
+	/* === FOOTER === */
+
+	.footer {
+		.wrapper {
+			flex-wrap: nowrap;
+		}
+
+		&__logo {
+			i {
+				font-size: 6rem;
+				margin-right: 12px;
+			}
+
+			span {
+				font-size: 6rem;
+			}
+		}
+
+		&__column {
+			width: 33.3%;
+		}
+
+		&__heading {
+			font-size: 2.7rem;
+			margin-bottom: 20px;
 		}
 	}
 }
