@@ -298,7 +298,7 @@ main {
 	}
 
 	&__image {
-		background-image: url("./img/banner-small.jpg");
+		background-image: url("../img/banner-small.jpg");
 		background-size: cover;
 		background-position: center;
 	}
@@ -369,7 +369,7 @@ main {
 	}
 
 	&__bg {
-		background-image: url("./img/hero-small.jpg");
+		background-image: url("../img/hero-small.jpg");
 		background-size: cover;
 		background-position: center;
 		z-index: -1;
@@ -1148,7 +1148,7 @@ main {
 		}
 
 		&__image {
-			background-image: url("./img/banner-large.jpg");
+			background-image: url("../img/banner-large.jpg");
 		}
 	}
 
@@ -1198,7 +1198,7 @@ main {
 		}
 
 		&__bg {
-			background-image: url("./img/hero-large.jpg");
+			background-image: url("../img/hero-large.jpg");
 		}
 	}
 
